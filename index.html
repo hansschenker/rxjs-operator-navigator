@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Navigate the RxJS operator zoo by patterns instead of names: four questions place any operator." />
+    <title>RxJS Operator Navigator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+  </head>
+  <body>
+    <header class="top">
+      <div class="eyebrow">Patterns, not names · <span id="meta"></span></div>
+      <h1>RxJS Operator Navigator</h1>
+      <p class="lede">
+        Every operator moves <em>packages</em>: values it cannot open, because <code>T</code> is a type parameter.
+        Four questions about those packages place any operator. Answer them in any order; the counts show what each answer leaves.
+      </p>
+    </header>
+
+    <div class="toolbar">
+      <label class="search"><span class="sr">Search operators</span><input id="search" type="search" placeholder="Search by name or behaviour, e.g. quiet period" autocomplete="off" /></label>
+      <label class="toggle"><input id="deprecated" type="checkbox" /> Show deprecated</label>
+      <button type="button" class="reset" data-reset>Reset answers</button>
+    </div>
+
+    <main class="layout">
+      <div id="questions" class="questions" aria-label="Questions"></div>
+      <div id="results" class="results" aria-live="polite"></div>
+    </main>
+    <div id="jump" class="jump"></div>
+
+    <section class="grammar-section">
+      <h2>Name grammar: verb + suffix</h2>
+      <div id="grammar"></div>
+    </section>
+
+    <footer>
+      Signatures extracted from the RxJS source (<code>rxjs/src/internal/operators</code>) with the TypeScript compiler.
+      Classification and model by Hans Schenker and Claude.
+      <a href="https://github.com/hansschenker/rxjs-operator-navigator">Source on GitHub</a>.
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

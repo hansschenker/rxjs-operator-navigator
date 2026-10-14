@@ -1,0 +1,32 @@
+{
+  "name": "rxjs-operator-navigator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Navigate the RxJS operator zoo by patterns instead of names.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "extract": "node scripts/extract-operators.mjs"
+  },
+  "dependencies": {
+    "rxjs": "7.8.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vite": "5.4.10",
+    "vitest": "2.1.4"
+  },
+  "author": "Hans Schenker",
+  "contributors": [
+    "Hans Schenker (https://github.com/hansschenker)",
+    "Claude (Anthropic)"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hansschenker/rxjs-operator-navigator.git"
+  }
+}

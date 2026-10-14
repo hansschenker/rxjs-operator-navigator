@@ -1,0 +1,5494 @@
+{
+ "rxjsVersion": "7.8.1",
+ "source": "rxjs/src/internal/operators",
+ "operators": [
+  {
+   "name": "audit",
+   "file": "audit.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "durationSelector",
+       "type": "(value: T) => ObservableInput<any>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "audit<T>(durationSelector: (value: T) => ObservableInput<any>): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "auditTime",
+   "file": "auditTime.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "duration",
+       "type": "number",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "scheduler",
+       "type": "SchedulerLike",
+       "optional": true,
+       "rest": false,
+       "default": "asyncScheduler"
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "auditTime<T>(duration: number, scheduler: SchedulerLike = asyncScheduler): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "buffer",
+   "file": "buffer.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "closingNotifier",
+       "type": "ObservableInput<any>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T[]>",
+     "text": "buffer<T>(closingNotifier: ObservableInput<any>): OperatorFunction<T, T[]>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "bufferCount",
+   "file": "bufferCount.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "bufferSize",
+       "type": "number",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "startBufferEvery",
+       "type": "number | null",
+       "optional": true,
+       "rest": false,
+       "default": "null"
+      }
+     ],
+     "returnType": "OperatorFunction<T, T[]>",
+     "text": "bufferCount<T>(bufferSize: number, startBufferEvery: number | null = null): OperatorFunction<T, T[]>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "bufferTime",
+   "file": "bufferTime.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "bufferTimeSpan",
+       "type": "number",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "scheduler",
+       "type": "SchedulerLike",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T[]>",
+     "text": "bufferTime<T>(bufferTimeSpan: number, scheduler?: SchedulerLike): OperatorFunction<T, T[]>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "bufferTimeSpan",
+       "type": "number",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "bufferCreationInterval",
+       "type": "number | null | undefined",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "scheduler",
+       "type": "SchedulerLike",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T[]>",
+     "text": "bufferTime<T>(bufferTimeSpan: number, bufferCreationInterval: number | null | undefined, scheduler?: SchedulerLike): OperatorFunction<T, T[]>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "bufferTimeSpan",
+       "type": "number",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "bufferCreationInterval",
+       "type": "number | null | undefined",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "maxBufferSize",
+       "type": "number",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "scheduler",
+       "type": "SchedulerLike",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T[]>",
+     "text": "bufferTime<T>(bufferTimeSpan: number, bufferCreationInterval: number | null | undefined, maxBufferSize: number, scheduler?: SchedulerLike): OperatorFunction<T, T[]>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "bufferToggle",
+   "file": "bufferToggle.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "O"
+     ],
+     "params": [
+      {
+       "name": "openings",
+       "type": "ObservableInput<O>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "closingSelector",
+       "type": "(value: O) => ObservableInput<any>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T[]>",
+     "text": "bufferToggle<T, O>(openings: ObservableInput<O>, closingSelector: (value: O) => ObservableInput<any>): OperatorFunction<T, T[]>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "bufferWhen",
+   "file": "bufferWhen.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "closingSelector",
+       "type": "() => ObservableInput<any>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T[]>",
+     "text": "bufferWhen<T>(closingSelector: () => ObservableInput<any>): OperatorFunction<T, T[]>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "catchError",
+   "file": "catchError.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "O extends ObservableInput<any>"
+     ],
+     "params": [
+      {
+       "name": "selector",
+       "type": "(err: any, caught: Observable<T>) => O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | ObservedValueOf<O>>",
+     "text": "catchError<T, O extends ObservableInput<any>>(selector: (err: any, caught: Observable<T>) => O): OperatorFunction<T, T | ObservedValueOf<O>>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "combineLatest",
+   "file": "combineLatest.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[]",
+      "R"
+     ],
+     "params": [
+      {
+       "name": "sources",
+       "type": "[...ObservableInputTuple<A>]",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "project",
+       "type": "(...values: [T, ...A]) => R",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, R>",
+     "text": "combineLatest<T, A extends readonly unknown[], R>(sources: [...ObservableInputTuple<A>], project: (...values: [T, ...A]) => R): OperatorFunction<T, R>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[]",
+      "R"
+     ],
+     "params": [
+      {
+       "name": "sources",
+       "type": "[...ObservableInputTuple<A>]",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, [T, ...A]>",
+     "text": "combineLatest<T, A extends readonly unknown[], R>(sources: [...ObservableInputTuple<A>]): OperatorFunction<T, [T, ...A]>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[]",
+      "R"
+     ],
+     "params": [
+      {
+       "name": "sourcesAndProject",
+       "type": "[...ObservableInputTuple<A>, (...values: [T, ...A]) => R]",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, R>",
+     "text": "combineLatest<T, A extends readonly unknown[], R>(...sourcesAndProject: [...ObservableInputTuple<A>, (...values: [T, ...A]) => R]): OperatorFunction<T, R>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[]",
+      "R"
+     ],
+     "params": [
+      {
+       "name": "sources",
+       "type": "[...ObservableInputTuple<A>]",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, [T, ...A]>",
+     "text": "combineLatest<T, A extends readonly unknown[], R>(...sources: [...ObservableInputTuple<A>]): OperatorFunction<T, [T, ...A]>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": true
+  },
+  {
+   "name": "combineLatestAll",
+   "file": "combineLatestAll.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [],
+     "returnType": "OperatorFunction<ObservableInput<T>, T[]>",
+     "text": "combineLatestAll<T>(): OperatorFunction<ObservableInput<T>, T[]>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [],
+     "returnType": "OperatorFunction<any, T[]>",
+     "text": "combineLatestAll<T>(): OperatorFunction<any, T[]>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "R"
+     ],
+     "params": [
+      {
+       "name": "project",
+       "type": "(...values: T[]) => R",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<ObservableInput<T>, R>",
+     "text": "combineLatestAll<T, R>(project: (...values: T[]) => R): OperatorFunction<ObservableInput<T>, R>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "R"
+     ],
+     "params": [
+      {
+       "name": "project",
+       "type": "(...values: Array<any>) => R",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<any, R>",
+     "text": "combineLatestAll<R>(project: (...values: Array<any>) => R): OperatorFunction<any, R>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "combineLatestWith",
+   "file": "combineLatestWith.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[]"
+     ],
+     "params": [
+      {
+       "name": "otherSources",
+       "type": "[...ObservableInputTuple<A>]",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, Cons<T, A>>",
+     "text": "combineLatestWith<T, A extends readonly unknown[]>(...otherSources: [...ObservableInputTuple<A>]): OperatorFunction<T, Cons<T, A>>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "concat",
+   "file": "concat.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[]"
+     ],
+     "params": [
+      {
+       "name": "sources",
+       "type": "[...ObservableInputTuple<A>]",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | A[number]>",
+     "text": "concat<T, A extends readonly unknown[]>(...sources: [...ObservableInputTuple<A>]): OperatorFunction<T, T | A[number]>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[]"
+     ],
+     "params": [
+      {
+       "name": "sourcesAndScheduler",
+       "type": "[...ObservableInputTuple<A>, SchedulerLike]",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | A[number]>",
+     "text": "concat<T, A extends readonly unknown[]>(...sourcesAndScheduler: [...ObservableInputTuple<A>, SchedulerLike]): OperatorFunction<T, T | A[number]>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": true
+  },
+  {
+   "name": "concatAll",
+   "file": "concatAll.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "O extends ObservableInput<any>"
+     ],
+     "params": [],
+     "returnType": "OperatorFunction<O, ObservedValueOf<O>>",
+     "text": "concatAll<O extends ObservableInput<any>>(): OperatorFunction<O, ObservedValueOf<O>>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "concatMap",
+   "file": "concatMap.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "O extends ObservableInput<any>"
+     ],
+     "params": [
+      {
+       "name": "project",
+       "type": "(value: T, index: number) => O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, ObservedValueOf<O>>",
+     "text": "concatMap<T, O extends ObservableInput<any>>(project: (value: T, index: number) => O): OperatorFunction<T, ObservedValueOf<O>>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "O extends ObservableInput<any>"
+     ],
+     "params": [
+      {
+       "name": "project",
+       "type": "(value: T, index: number) => O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "resultSelector",
+       "type": "undefined",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, ObservedValueOf<O>>",
+     "text": "concatMap<T, O extends ObservableInput<any>>(project: (value: T, index: number) => O, resultSelector: undefined): OperatorFunction<T, ObservedValueOf<O>>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "R",
+      "O extends ObservableInput<any>"
+     ],
+     "params": [
+      {
+       "name": "project",
+       "type": "(value: T, index: number) => O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "resultSelector",
+       "type": "(outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, R>",
+     "text": "concatMap<T, R, O extends ObservableInput<any>>(project: (value: T, index: number) => O, resultSelector: (outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R): OperatorFunction<T, R>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "concatMapTo",
+   "file": "concatMapTo.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "O extends ObservableInput<unknown>"
+     ],
+     "params": [
+      {
+       "name": "observable",
+       "type": "O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<unknown, ObservedValueOf<O>>",
+     "text": "concatMapTo<O extends ObservableInput<unknown>>(observable: O): OperatorFunction<unknown, ObservedValueOf<O>>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "O extends ObservableInput<unknown>"
+     ],
+     "params": [
+      {
+       "name": "observable",
+       "type": "O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "resultSelector",
+       "type": "undefined",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<unknown, ObservedValueOf<O>>",
+     "text": "concatMapTo<O extends ObservableInput<unknown>>(observable: O, resultSelector: undefined): OperatorFunction<unknown, ObservedValueOf<O>>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "R",
+      "O extends ObservableInput<unknown>"
+     ],
+     "params": [
+      {
+       "name": "observable",
+       "type": "O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "resultSelector",
+       "type": "(outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, R>",
+     "text": "concatMapTo<T, R, O extends ObservableInput<unknown>>(observable: O, resultSelector: (outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R): OperatorFunction<T, R>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": true
+  },
+  {
+   "name": "concatWith",
+   "file": "concatWith.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[]"
+     ],
+     "params": [
+      {
+       "name": "otherSources",
+       "type": "[...ObservableInputTuple<A>]",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | A[number]>",
+     "text": "concatWith<T, A extends readonly unknown[]>(...otherSources: [...ObservableInputTuple<A>]): OperatorFunction<T, T | A[number]>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "connect",
+   "file": "connect.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "O extends ObservableInput<unknown>"
+     ],
+     "params": [
+      {
+       "name": "selector",
+       "type": "(shared: Observable<T>) => O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "config",
+       "type": "ConnectConfig<T>",
+       "optional": true,
+       "rest": false,
+       "default": "DEFAULT_CONFIG"
+      }
+     ],
+     "returnType": "OperatorFunction<T, ObservedValueOf<O>>",
+     "text": "connect<T, O extends ObservableInput<unknown>>(selector: (shared: Observable<T>) => O, config: ConnectConfig<T> = DEFAULT_CONFIG): OperatorFunction<T, ObservedValueOf<O>>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "count",
+   "file": "count.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(value: T, index: number) => boolean",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, number>",
+     "text": "count<T>(predicate?: (value: T, index: number) => boolean): OperatorFunction<T, number>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "debounce",
+   "file": "debounce.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "durationSelector",
+       "type": "(value: T) => ObservableInput<any>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "debounce<T>(durationSelector: (value: T) => ObservableInput<any>): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "debounceTime",
+   "file": "debounceTime.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "dueTime",
+       "type": "number",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "scheduler",
+       "type": "SchedulerLike",
+       "optional": true,
+       "rest": false,
+       "default": "asyncScheduler"
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "debounceTime<T>(dueTime: number, scheduler: SchedulerLike = asyncScheduler): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "defaultIfEmpty",
+   "file": "defaultIfEmpty.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "R"
+     ],
+     "params": [
+      {
+       "name": "defaultValue",
+       "type": "R",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | R>",
+     "text": "defaultIfEmpty<T, R>(defaultValue: R): OperatorFunction<T, T | R>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "delay",
+   "file": "delay.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "due",
+       "type": "number | Date",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "scheduler",
+       "type": "SchedulerLike",
+       "optional": true,
+       "rest": false,
+       "default": "asyncScheduler"
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "delay<T>(due: number | Date, scheduler: SchedulerLike = asyncScheduler): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "delayWhen",
+   "file": "delayWhen.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "delayDurationSelector",
+       "type": "(value: T, index: number) => ObservableInput<any>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "subscriptionDelay",
+       "type": "Observable<any>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "delayWhen<T>(delayDurationSelector: (value: T, index: number) => ObservableInput<any>, subscriptionDelay: Observable<any>): MonoTypeOperatorFunction<T>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "delayDurationSelector",
+       "type": "(value: T, index: number) => ObservableInput<any>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "delayWhen<T>(delayDurationSelector: (value: T, index: number) => ObservableInput<any>): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "dematerialize",
+   "file": "dematerialize.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "N extends ObservableNotification<any>"
+     ],
+     "params": [],
+     "returnType": "OperatorFunction<N, ValueFromNotification<N>>",
+     "text": "dematerialize<N extends ObservableNotification<any>>(): OperatorFunction<N, ValueFromNotification<N>>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "distinct",
+   "file": "distinct.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "K"
+     ],
+     "params": [
+      {
+       "name": "keySelector",
+       "type": "(value: T) => K",
+       "optional": true,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "flushes",
+       "type": "ObservableInput<any>",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "distinct<T, K>(keySelector?: (value: T) => K, flushes?: ObservableInput<any>): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "distinctUntilChanged",
+   "file": "distinctUntilChanged.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "comparator",
+       "type": "(previous: T, current: T) => boolean",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "distinctUntilChanged<T>(comparator?: (previous: T, current: T) => boolean): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "K"
+     ],
+     "params": [
+      {
+       "name": "comparator",
+       "type": "(previous: K, current: K) => boolean",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "keySelector",
+       "type": "(value: T) => K",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "distinctUntilChanged<T, K>(comparator: (previous: K, current: K) => boolean, keySelector: (value: T) => K): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "distinctUntilKeyChanged",
+   "file": "distinctUntilKeyChanged.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "key",
+       "type": "keyof T",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "distinctUntilKeyChanged<T>(key: keyof T): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "K extends keyof T"
+     ],
+     "params": [
+      {
+       "name": "key",
+       "type": "K",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "compare",
+       "type": "(x: T[K], y: T[K]) => boolean",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "distinctUntilKeyChanged<T, K extends keyof T>(key: K, compare: (x: T[K], y: T[K]) => boolean): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "elementAt",
+   "file": "elementAt.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "D = T"
+     ],
+     "params": [
+      {
+       "name": "index",
+       "type": "number",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "defaultValue",
+       "type": "D",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | D>",
+     "text": "elementAt<T, D = T>(index: number, defaultValue?: D): OperatorFunction<T, T | D>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "endWith",
+   "file": "endWith.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "scheduler",
+       "type": "SchedulerLike",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "endWith<T>(scheduler: SchedulerLike): MonoTypeOperatorFunction<T>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "A extends unknown[] = T[]"
+     ],
+     "params": [
+      {
+       "name": "valuesAndScheduler",
+       "type": "[...A, SchedulerLike]",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | ValueFromArray<A>>",
+     "text": "endWith<T, A extends unknown[] = T[]>(...valuesAndScheduler: [...A, SchedulerLike]): OperatorFunction<T, T | ValueFromArray<A>>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "A extends unknown[] = T[]"
+     ],
+     "params": [
+      {
+       "name": "values",
+       "type": "A",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | ValueFromArray<A>>",
+     "text": "endWith<T, A extends unknown[] = T[]>(...values: A): OperatorFunction<T, T | ValueFromArray<A>>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "every",
+   "file": "every.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "BooleanConstructor",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, Exclude<T, Falsy> extends never ? false : boolean>",
+     "text": "every<T>(predicate: BooleanConstructor): OperatorFunction<T, Exclude<T, Falsy> extends never ? false : boolean>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "BooleanConstructor",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "thisArg",
+       "type": "any",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, Exclude<T, Falsy> extends never ? false : boolean>",
+     "text": "every<T>(predicate: BooleanConstructor, thisArg: any): OperatorFunction<T, Exclude<T, Falsy> extends never ? false : boolean>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "A"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(this: A, value: T, index: number, source: Observable<T>) => boolean",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "thisArg",
+       "type": "A",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, boolean>",
+     "text": "every<T, A>(predicate: (this: A, value: T, index: number, source: Observable<T>) => boolean, thisArg: A): OperatorFunction<T, boolean>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(value: T, index: number, source: Observable<T>) => boolean",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, boolean>",
+     "text": "every<T>(predicate: (value: T, index: number, source: Observable<T>) => boolean): OperatorFunction<T, boolean>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "exhaustAll",
+   "file": "exhaustAll.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "O extends ObservableInput<any>"
+     ],
+     "params": [],
+     "returnType": "OperatorFunction<O, ObservedValueOf<O>>",
+     "text": "exhaustAll<O extends ObservableInput<any>>(): OperatorFunction<O, ObservedValueOf<O>>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "exhaustMap",
+   "file": "exhaustMap.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "O extends ObservableInput<any>"
+     ],
+     "params": [
+      {
+       "name": "project",
+       "type": "(value: T, index: number) => O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, ObservedValueOf<O>>",
+     "text": "exhaustMap<T, O extends ObservableInput<any>>(project: (value: T, index: number) => O): OperatorFunction<T, ObservedValueOf<O>>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "O extends ObservableInput<any>"
+     ],
+     "params": [
+      {
+       "name": "project",
+       "type": "(value: T, index: number) => O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "resultSelector",
+       "type": "undefined",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, ObservedValueOf<O>>",
+     "text": "exhaustMap<T, O extends ObservableInput<any>>(project: (value: T, index: number) => O, resultSelector: undefined): OperatorFunction<T, ObservedValueOf<O>>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "I",
+      "R"
+     ],
+     "params": [
+      {
+       "name": "project",
+       "type": "(value: T, index: number) => ObservableInput<I>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "resultSelector",
+       "type": "(outerValue: T, innerValue: I, outerIndex: number, innerIndex: number) => R",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, R>",
+     "text": "exhaustMap<T, I, R>(project: (value: T, index: number) => ObservableInput<I>, resultSelector: (outerValue: T, innerValue: I, outerIndex: number, innerIndex: number) => R): OperatorFunction<T, R>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "expand",
+   "file": "expand.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "O extends ObservableInput<unknown>"
+     ],
+     "params": [
+      {
+       "name": "project",
+       "type": "(value: T, index: number) => O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "concurrent",
+       "type": "number",
+       "optional": true,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "scheduler",
+       "type": "SchedulerLike",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, ObservedValueOf<O>>",
+     "text": "expand<T, O extends ObservableInput<unknown>>(project: (value: T, index: number) => O, concurrent?: number, scheduler?: SchedulerLike): OperatorFunction<T, ObservedValueOf<O>>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "O extends ObservableInput<unknown>"
+     ],
+     "params": [
+      {
+       "name": "project",
+       "type": "(value: T, index: number) => O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "concurrent",
+       "type": "number | undefined",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "scheduler",
+       "type": "SchedulerLike",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, ObservedValueOf<O>>",
+     "text": "expand<T, O extends ObservableInput<unknown>>(project: (value: T, index: number) => O, concurrent: number | undefined, scheduler: SchedulerLike): OperatorFunction<T, ObservedValueOf<O>>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "filter",
+   "file": "filter.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "S extends T",
+      "A"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(this: A, value: T, index: number) => value is S",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "thisArg",
+       "type": "A",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, S>",
+     "text": "filter<T, S extends T, A>(predicate: (this: A, value: T, index: number) => value is S, thisArg: A): OperatorFunction<T, S>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "S extends T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(value: T, index: number) => value is S",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, S>",
+     "text": "filter<T, S extends T>(predicate: (value: T, index: number) => value is S): OperatorFunction<T, S>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "BooleanConstructor",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, TruthyTypesOf<T>>",
+     "text": "filter<T>(predicate: BooleanConstructor): OperatorFunction<T, TruthyTypesOf<T>>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "A"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(this: A, value: T, index: number) => boolean",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "thisArg",
+       "type": "A",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "filter<T, A>(predicate: (this: A, value: T, index: number) => boolean, thisArg: A): MonoTypeOperatorFunction<T>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(value: T, index: number) => boolean",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "filter<T>(predicate: (value: T, index: number) => boolean): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "finalize",
+   "file": "finalize.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "callback",
+       "type": "() => void",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "finalize<T>(callback: () => void): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "find",
+   "file": "find.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "BooleanConstructor",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, TruthyTypesOf<T>>",
+     "text": "find<T>(predicate: BooleanConstructor): OperatorFunction<T, TruthyTypesOf<T>>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "S extends T",
+      "A"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(this: A, value: T, index: number, source: Observable<T>) => value is S",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "thisArg",
+       "type": "A",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, S | undefined>",
+     "text": "find<T, S extends T, A>(predicate: (this: A, value: T, index: number, source: Observable<T>) => value is S, thisArg: A): OperatorFunction<T, S | undefined>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "S extends T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(value: T, index: number, source: Observable<T>) => value is S",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, S | undefined>",
+     "text": "find<T, S extends T>(predicate: (value: T, index: number, source: Observable<T>) => value is S): OperatorFunction<T, S | undefined>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "A"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(this: A, value: T, index: number, source: Observable<T>) => boolean",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "thisArg",
+       "type": "A",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | undefined>",
+     "text": "find<T, A>(predicate: (this: A, value: T, index: number, source: Observable<T>) => boolean, thisArg: A): OperatorFunction<T, T | undefined>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(value: T, index: number, source: Observable<T>) => boolean",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | undefined>",
+     "text": "find<T>(predicate: (value: T, index: number, source: Observable<T>) => boolean): OperatorFunction<T, T | undefined>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "findIndex",
+   "file": "findIndex.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "BooleanConstructor",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T extends Falsy ? -1 : number>",
+     "text": "findIndex<T>(predicate: BooleanConstructor): OperatorFunction<T, T extends Falsy ? -1 : number>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "BooleanConstructor",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "thisArg",
+       "type": "any",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T extends Falsy ? -1 : number>",
+     "text": "findIndex<T>(predicate: BooleanConstructor, thisArg: any): OperatorFunction<T, T extends Falsy ? -1 : number>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "A"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(this: A, value: T, index: number, source: Observable<T>) => boolean",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "thisArg",
+       "type": "A",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, number>",
+     "text": "findIndex<T, A>(predicate: (this: A, value: T, index: number, source: Observable<T>) => boolean, thisArg: A): OperatorFunction<T, number>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(value: T, index: number, source: Observable<T>) => boolean",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, number>",
+     "text": "findIndex<T>(predicate: (value: T, index: number, source: Observable<T>) => boolean): OperatorFunction<T, number>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "first",
+   "file": "first.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "D = T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "null",
+       "optional": true,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "defaultValue",
+       "type": "D",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | D>",
+     "text": "first<T, D = T>(predicate?: null, defaultValue?: D): OperatorFunction<T, T | D>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "BooleanConstructor",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, TruthyTypesOf<T>>",
+     "text": "first<T>(predicate: BooleanConstructor): OperatorFunction<T, TruthyTypesOf<T>>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "D"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "BooleanConstructor",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "defaultValue",
+       "type": "D",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, TruthyTypesOf<T> | D>",
+     "text": "first<T, D>(predicate: BooleanConstructor, defaultValue: D): OperatorFunction<T, TruthyTypesOf<T> | D>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "S extends T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(value: T, index: number, source: Observable<T>) => value is S",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "defaultValue",
+       "type": "S",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, S>",
+     "text": "first<T, S extends T>(predicate: (value: T, index: number, source: Observable<T>) => value is S, defaultValue?: S): OperatorFunction<T, S>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "S extends T",
+      "D"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(value: T, index: number, source: Observable<T>) => value is S",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "defaultValue",
+       "type": "D",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, S | D>",
+     "text": "first<T, S extends T, D>(predicate: (value: T, index: number, source: Observable<T>) => value is S, defaultValue: D): OperatorFunction<T, S | D>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "D = T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(value: T, index: number, source: Observable<T>) => boolean",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "defaultValue",
+       "type": "D",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | D>",
+     "text": "first<T, D = T>(predicate: (value: T, index: number, source: Observable<T>) => boolean, defaultValue?: D): OperatorFunction<T, T | D>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "groupBy",
+   "file": "groupBy.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "K"
+     ],
+     "params": [
+      {
+       "name": "key",
+       "type": "(value: T) => K",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "options",
+       "type": "BasicGroupByOptions<K, T>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, GroupedObservable<K, T>>",
+     "text": "groupBy<T, K>(key: (value: T) => K, options: BasicGroupByOptions<K, T>): OperatorFunction<T, GroupedObservable<K, T>>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "K",
+      "E"
+     ],
+     "params": [
+      {
+       "name": "key",
+       "type": "(value: T) => K",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "options",
+       "type": "GroupByOptionsWithElement<K, E, T>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, GroupedObservable<K, E>>",
+     "text": "groupBy<T, K, E>(key: (value: T) => K, options: GroupByOptionsWithElement<K, E, T>): OperatorFunction<T, GroupedObservable<K, E>>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "K extends T"
+     ],
+     "params": [
+      {
+       "name": "key",
+       "type": "(value: T) => value is K",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, GroupedObservable<true, K> | GroupedObservable<false, Exclude<T, K>>>",
+     "text": "groupBy<T, K extends T>(key: (value: T) => value is K): OperatorFunction<T, GroupedObservable<true, K> | GroupedObservable<false, Exclude<T, K>>>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "K"
+     ],
+     "params": [
+      {
+       "name": "key",
+       "type": "(value: T) => K",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, GroupedObservable<K, T>>",
+     "text": "groupBy<T, K>(key: (value: T) => K): OperatorFunction<T, GroupedObservable<K, T>>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "K"
+     ],
+     "params": [
+      {
+       "name": "key",
+       "type": "(value: T) => K",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "element",
+       "type": "void",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "duration",
+       "type": "(grouped: GroupedObservable<K, T>) => Observable<any>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, GroupedObservable<K, T>>",
+     "text": "groupBy<T, K>(key: (value: T) => K, element: void, duration: (grouped: GroupedObservable<K, T>) => Observable<any>): OperatorFunction<T, GroupedObservable<K, T>>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "K",
+      "R"
+     ],
+     "params": [
+      {
+       "name": "key",
+       "type": "(value: T) => K",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "element",
+       "type": "(value: T) => R",
+       "optional": true,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "duration",
+       "type": "(grouped: GroupedObservable<K, R>) => Observable<any>",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, GroupedObservable<K, R>>",
+     "text": "groupBy<T, K, R>(key: (value: T) => K, element?: (value: T) => R, duration?: (grouped: GroupedObservable<K, R>) => Observable<any>): OperatorFunction<T, GroupedObservable<K, R>>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "K",
+      "R"
+     ],
+     "params": [
+      {
+       "name": "key",
+       "type": "(value: T) => K",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "element",
+       "type": "(value: T) => R",
+       "optional": true,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "duration",
+       "type": "(grouped: GroupedObservable<K, R>) => Observable<any>",
+       "optional": true,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "connector",
+       "type": "() => Subject<R>",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, GroupedObservable<K, R>>",
+     "text": "groupBy<T, K, R>(key: (value: T) => K, element?: (value: T) => R, duration?: (grouped: GroupedObservable<K, R>) => Observable<any>, connector?: () => Subject<R>): OperatorFunction<T, GroupedObservable<K, R>>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "ignoreElements",
+   "file": "ignoreElements.ts",
+   "signatures": [
+    {
+     "typeParameters": [],
+     "params": [],
+     "returnType": "OperatorFunction<unknown, never>",
+     "text": "ignoreElements(): OperatorFunction<unknown, never>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "isEmpty",
+   "file": "isEmpty.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [],
+     "returnType": "OperatorFunction<T, boolean>",
+     "text": "isEmpty<T>(): OperatorFunction<T, boolean>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "last",
+   "file": "last.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "BooleanConstructor",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, TruthyTypesOf<T>>",
+     "text": "last<T>(predicate: BooleanConstructor): OperatorFunction<T, TruthyTypesOf<T>>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "D"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "BooleanConstructor",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "defaultValue",
+       "type": "D",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, TruthyTypesOf<T> | D>",
+     "text": "last<T, D>(predicate: BooleanConstructor, defaultValue: D): OperatorFunction<T, TruthyTypesOf<T> | D>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "D = T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "null",
+       "optional": true,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "defaultValue",
+       "type": "D",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | D>",
+     "text": "last<T, D = T>(predicate?: null, defaultValue?: D): OperatorFunction<T, T | D>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "S extends T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(value: T, index: number, source: Observable<T>) => value is S",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "defaultValue",
+       "type": "S",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, S>",
+     "text": "last<T, S extends T>(predicate: (value: T, index: number, source: Observable<T>) => value is S, defaultValue?: S): OperatorFunction<T, S>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "D = T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(value: T, index: number, source: Observable<T>) => boolean",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "defaultValue",
+       "type": "D",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | D>",
+     "text": "last<T, D = T>(predicate: (value: T, index: number, source: Observable<T>) => boolean, defaultValue?: D): OperatorFunction<T, T | D>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "map",
+   "file": "map.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "R"
+     ],
+     "params": [
+      {
+       "name": "project",
+       "type": "(value: T, index: number) => R",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, R>",
+     "text": "map<T, R>(project: (value: T, index: number) => R): OperatorFunction<T, R>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "R",
+      "A"
+     ],
+     "params": [
+      {
+       "name": "project",
+       "type": "(this: A, value: T, index: number) => R",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "thisArg",
+       "type": "A",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, R>",
+     "text": "map<T, R, A>(project: (this: A, value: T, index: number) => R, thisArg: A): OperatorFunction<T, R>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "mapTo",
+   "file": "mapTo.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "R"
+     ],
+     "params": [
+      {
+       "name": "value",
+       "type": "R",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<unknown, R>",
+     "text": "mapTo<R>(value: R): OperatorFunction<unknown, R>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "R"
+     ],
+     "params": [
+      {
+       "name": "value",
+       "type": "R",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, R>",
+     "text": "mapTo<T, R>(value: R): OperatorFunction<T, R>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": true
+  },
+  {
+   "name": "materialize",
+   "file": "materialize.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [],
+     "returnType": "OperatorFunction<T, Notification<T> & ObservableNotification<T>>",
+     "text": "materialize<T>(): OperatorFunction<T, Notification<T> & ObservableNotification<T>>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "max",
+   "file": "max.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "comparer",
+       "type": "(x: T, y: T) => number",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "max<T>(comparer?: (x: T, y: T) => number): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "merge",
+   "file": "merge.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[]"
+     ],
+     "params": [
+      {
+       "name": "sources",
+       "type": "[...ObservableInputTuple<A>]",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | A[number]>",
+     "text": "merge<T, A extends readonly unknown[]>(...sources: [...ObservableInputTuple<A>]): OperatorFunction<T, T | A[number]>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[]"
+     ],
+     "params": [
+      {
+       "name": "sourcesAndConcurrency",
+       "type": "[...ObservableInputTuple<A>, number]",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | A[number]>",
+     "text": "merge<T, A extends readonly unknown[]>(...sourcesAndConcurrency: [...ObservableInputTuple<A>, number]): OperatorFunction<T, T | A[number]>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[]"
+     ],
+     "params": [
+      {
+       "name": "sourcesAndScheduler",
+       "type": "[...ObservableInputTuple<A>, SchedulerLike]",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | A[number]>",
+     "text": "merge<T, A extends readonly unknown[]>(...sourcesAndScheduler: [...ObservableInputTuple<A>, SchedulerLike]): OperatorFunction<T, T | A[number]>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[]"
+     ],
+     "params": [
+      {
+       "name": "sourcesAndConcurrencyAndScheduler",
+       "type": "[...ObservableInputTuple<A>, number, SchedulerLike]",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | A[number]>",
+     "text": "merge<T, A extends readonly unknown[]>(...sourcesAndConcurrencyAndScheduler: [...ObservableInputTuple<A>, number, SchedulerLike]): OperatorFunction<T, T | A[number]>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": true
+  },
+  {
+   "name": "mergeAll",
+   "file": "mergeAll.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "O extends ObservableInput<any>"
+     ],
+     "params": [
+      {
+       "name": "concurrent",
+       "type": "number",
+       "optional": true,
+       "rest": false,
+       "default": "Infinity"
+      }
+     ],
+     "returnType": "OperatorFunction<O, ObservedValueOf<O>>",
+     "text": "mergeAll<O extends ObservableInput<any>>(concurrent: number = Infinity): OperatorFunction<O, ObservedValueOf<O>>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "mergeMap",
+   "file": "mergeMap.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "O extends ObservableInput<any>"
+     ],
+     "params": [
+      {
+       "name": "project",
+       "type": "(value: T, index: number) => O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "concurrent",
+       "type": "number",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, ObservedValueOf<O>>",
+     "text": "mergeMap<T, O extends ObservableInput<any>>(project: (value: T, index: number) => O, concurrent?: number): OperatorFunction<T, ObservedValueOf<O>>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "O extends ObservableInput<any>"
+     ],
+     "params": [
+      {
+       "name": "project",
+       "type": "(value: T, index: number) => O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "resultSelector",
+       "type": "undefined",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "concurrent",
+       "type": "number",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, ObservedValueOf<O>>",
+     "text": "mergeMap<T, O extends ObservableInput<any>>(project: (value: T, index: number) => O, resultSelector: undefined, concurrent?: number): OperatorFunction<T, ObservedValueOf<O>>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "R",
+      "O extends ObservableInput<any>"
+     ],
+     "params": [
+      {
+       "name": "project",
+       "type": "(value: T, index: number) => O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "resultSelector",
+       "type": "(outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "concurrent",
+       "type": "number",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, R>",
+     "text": "mergeMap<T, R, O extends ObservableInput<any>>(project: (value: T, index: number) => O, resultSelector: (outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R, concurrent?: number): OperatorFunction<T, R>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "mergeMapTo",
+   "file": "mergeMapTo.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "O extends ObservableInput<unknown>"
+     ],
+     "params": [
+      {
+       "name": "innerObservable",
+       "type": "O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "concurrent",
+       "type": "number",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<unknown, ObservedValueOf<O>>",
+     "text": "mergeMapTo<O extends ObservableInput<unknown>>(innerObservable: O, concurrent?: number): OperatorFunction<unknown, ObservedValueOf<O>>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "R",
+      "O extends ObservableInput<unknown>"
+     ],
+     "params": [
+      {
+       "name": "innerObservable",
+       "type": "O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "resultSelector",
+       "type": "(outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "concurrent",
+       "type": "number",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, R>",
+     "text": "mergeMapTo<T, R, O extends ObservableInput<unknown>>(innerObservable: O, resultSelector: (outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R, concurrent?: number): OperatorFunction<T, R>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": true
+  },
+  {
+   "name": "mergeScan",
+   "file": "mergeScan.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "R"
+     ],
+     "params": [
+      {
+       "name": "accumulator",
+       "type": "(acc: R, value: T, index: number) => ObservableInput<R>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "seed",
+       "type": "R",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "concurrent",
+       "type": null,
+       "optional": true,
+       "rest": false,
+       "default": "Infinity"
+      }
+     ],
+     "returnType": "OperatorFunction<T, R>",
+     "text": "mergeScan<T, R>(accumulator: (acc: R, value: T, index: number) => ObservableInput<R>, seed: R, concurrent = Infinity): OperatorFunction<T, R>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "mergeWith",
+   "file": "mergeWith.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[]"
+     ],
+     "params": [
+      {
+       "name": "otherSources",
+       "type": "[...ObservableInputTuple<A>]",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | A[number]>",
+     "text": "mergeWith<T, A extends readonly unknown[]>(...otherSources: [...ObservableInputTuple<A>]): OperatorFunction<T, T | A[number]>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "min",
+   "file": "min.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "comparer",
+       "type": "(x: T, y: T) => number",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "min<T>(comparer?: (x: T, y: T) => number): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "multicast",
+   "file": "multicast.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "subject",
+       "type": "Subject<T>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "UnaryFunction<Observable<T>, ConnectableObservable<T>>",
+     "text": "multicast<T>(subject: Subject<T>): UnaryFunction<Observable<T>, ConnectableObservable<T>>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "O extends ObservableInput<any>"
+     ],
+     "params": [
+      {
+       "name": "subject",
+       "type": "Subject<T>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "selector",
+       "type": "(shared: Observable<T>) => O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, ObservedValueOf<O>>",
+     "text": "multicast<T, O extends ObservableInput<any>>(subject: Subject<T>, selector: (shared: Observable<T>) => O): OperatorFunction<T, ObservedValueOf<O>>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "subjectFactory",
+       "type": "() => Subject<T>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "UnaryFunction<Observable<T>, ConnectableObservable<T>>",
+     "text": "multicast<T>(subjectFactory: () => Subject<T>): UnaryFunction<Observable<T>, ConnectableObservable<T>>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "O extends ObservableInput<any>"
+     ],
+     "params": [
+      {
+       "name": "subjectFactory",
+       "type": "() => Subject<T>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "selector",
+       "type": "(shared: Observable<T>) => O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, ObservedValueOf<O>>",
+     "text": "multicast<T, O extends ObservableInput<any>>(subjectFactory: () => Subject<T>, selector: (shared: Observable<T>) => O): OperatorFunction<T, ObservedValueOf<O>>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": true
+  },
+  {
+   "name": "observeOn",
+   "file": "observeOn.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "scheduler",
+       "type": "SchedulerLike",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "delay",
+       "type": null,
+       "optional": true,
+       "rest": false,
+       "default": "0"
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "observeOn<T>(scheduler: SchedulerLike, delay = 0): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "onErrorResumeNextWith",
+   "file": "onErrorResumeNextWith.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[]"
+     ],
+     "params": [
+      {
+       "name": "sources",
+       "type": "[...ObservableInputTuple<A>]",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | A[number]>",
+     "text": "onErrorResumeNextWith<T, A extends readonly unknown[]>(sources: [...ObservableInputTuple<A>]): OperatorFunction<T, T | A[number]>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[]"
+     ],
+     "params": [
+      {
+       "name": "sources",
+       "type": "[...ObservableInputTuple<A>]",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | A[number]>",
+     "text": "onErrorResumeNextWith<T, A extends readonly unknown[]>(...sources: [...ObservableInputTuple<A>]): OperatorFunction<T, T | A[number]>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "pairwise",
+   "file": "pairwise.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [],
+     "returnType": "OperatorFunction<T, [T, T]>",
+     "text": "pairwise<T>(): OperatorFunction<T, [T, T]>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "partition",
+   "file": "partition.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(value: T, index: number) => boolean",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "thisArg",
+       "type": "any",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "UnaryFunction<Observable<T>, [Observable<T>, Observable<T>]>",
+     "text": "partition<T>(predicate: (value: T, index: number) => boolean, thisArg?: any): UnaryFunction<Observable<T>, [Observable<T>, Observable<T>]>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": true
+  },
+  {
+   "name": "pluck",
+   "file": "pluck.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "K1 extends keyof T"
+     ],
+     "params": [
+      {
+       "name": "k1",
+       "type": "K1",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T[K1]>",
+     "text": "pluck<T, K1 extends keyof T>(k1: K1): OperatorFunction<T, T[K1]>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "K1 extends keyof T",
+      "K2 extends keyof T[K1]"
+     ],
+     "params": [
+      {
+       "name": "k1",
+       "type": "K1",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "k2",
+       "type": "K2",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T[K1][K2]>",
+     "text": "pluck<T, K1 extends keyof T, K2 extends keyof T[K1]>(k1: K1, k2: K2): OperatorFunction<T, T[K1][K2]>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "K1 extends keyof T",
+      "K2 extends keyof T[K1]",
+      "K3 extends keyof T[K1][K2]"
+     ],
+     "params": [
+      {
+       "name": "k1",
+       "type": "K1",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "k2",
+       "type": "K2",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "k3",
+       "type": "K3",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T[K1][K2][K3]>",
+     "text": "pluck<T, K1 extends keyof T, K2 extends keyof T[K1], K3 extends keyof T[K1][K2]>(k1: K1, k2: K2, k3: K3): OperatorFunction<T, T[K1][K2][K3]>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "K1 extends keyof T",
+      "K2 extends keyof T[K1]",
+      "K3 extends keyof T[K1][K2]",
+      "K4 extends keyof T[K1][K2][K3]"
+     ],
+     "params": [
+      {
+       "name": "k1",
+       "type": "K1",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "k2",
+       "type": "K2",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "k3",
+       "type": "K3",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "k4",
+       "type": "K4",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T[K1][K2][K3][K4]>",
+     "text": "pluck<T, K1 extends keyof T, K2 extends keyof T[K1], K3 extends keyof T[K1][K2], K4 extends keyof T[K1][K2][K3]>(k1: K1, k2: K2, k3: K3, k4: K4): OperatorFunction<T, T[K1][K2][K3][K4]>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "K1 extends keyof T",
+      "K2 extends keyof T[K1]",
+      "K3 extends keyof T[K1][K2]",
+      "K4 extends keyof T[K1][K2][K3]",
+      "K5 extends keyof T[K1][K2][K3][K4]"
+     ],
+     "params": [
+      {
+       "name": "k1",
+       "type": "K1",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "k2",
+       "type": "K2",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "k3",
+       "type": "K3",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "k4",
+       "type": "K4",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "k5",
+       "type": "K5",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T[K1][K2][K3][K4][K5]>",
+     "text": "pluck<T, K1 extends keyof T, K2 extends keyof T[K1], K3 extends keyof T[K1][K2], K4 extends keyof T[K1][K2][K3], K5 extends keyof T[K1][K2][K3][K4]>(k1: K1, k2: K2, k3: K3, k4: K4, k5: K5): OperatorFunction<T, T[K1][K2][K3][K4][K5]>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "K1 extends keyof T",
+      "K2 extends keyof T[K1]",
+      "K3 extends keyof T[K1][K2]",
+      "K4 extends keyof T[K1][K2][K3]",
+      "K5 extends keyof T[K1][K2][K3][K4]",
+      "K6 extends keyof T[K1][K2][K3][K4][K5]"
+     ],
+     "params": [
+      {
+       "name": "k1",
+       "type": "K1",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "k2",
+       "type": "K2",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "k3",
+       "type": "K3",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "k4",
+       "type": "K4",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "k5",
+       "type": "K5",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "k6",
+       "type": "K6",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T[K1][K2][K3][K4][K5][K6]>",
+     "text": "pluck<T, K1 extends keyof T, K2 extends keyof T[K1], K3 extends keyof T[K1][K2], K4 extends keyof T[K1][K2][K3], K5 extends keyof T[K1][K2][K3][K4], K6 extends keyof T[K1][K2][K3][K4][K5]>(k1: K1, k2: K2, k3: K3, k4: K4, k5: K5, k6: K6): OperatorFunction<T, T[K1][K2][K3][K4][K5][K6]>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "K1 extends keyof T",
+      "K2 extends keyof T[K1]",
+      "K3 extends keyof T[K1][K2]",
+      "K4 extends keyof T[K1][K2][K3]",
+      "K5 extends keyof T[K1][K2][K3][K4]",
+      "K6 extends keyof T[K1][K2][K3][K4][K5]"
+     ],
+     "params": [
+      {
+       "name": "k1",
+       "type": "K1",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "k2",
+       "type": "K2",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "k3",
+       "type": "K3",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "k4",
+       "type": "K4",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "k5",
+       "type": "K5",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "k6",
+       "type": "K6",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "rest",
+       "type": "string[]",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, unknown>",
+     "text": "pluck<T, K1 extends keyof T, K2 extends keyof T[K1], K3 extends keyof T[K1][K2], K4 extends keyof T[K1][K2][K3], K5 extends keyof T[K1][K2][K3][K4], K6 extends keyof T[K1][K2][K3][K4][K5]>(k1: K1, k2: K2, k3: K3, k4: K4, k5: K5, k6: K6, ...rest: string[]): OperatorFunction<T, unknown>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "properties",
+       "type": "string[]",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, unknown>",
+     "text": "pluck<T>(...properties: string[]): OperatorFunction<T, unknown>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": true
+  },
+  {
+   "name": "publish",
+   "file": "publish.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [],
+     "returnType": "UnaryFunction<Observable<T>, ConnectableObservable<T>>",
+     "text": "publish<T>(): UnaryFunction<Observable<T>, ConnectableObservable<T>>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "O extends ObservableInput<any>"
+     ],
+     "params": [
+      {
+       "name": "selector",
+       "type": "(shared: Observable<T>) => O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, ObservedValueOf<O>>",
+     "text": "publish<T, O extends ObservableInput<any>>(selector: (shared: Observable<T>) => O): OperatorFunction<T, ObservedValueOf<O>>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": true
+  },
+  {
+   "name": "publishBehavior",
+   "file": "publishBehavior.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "initialValue",
+       "type": "T",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "UnaryFunction<Observable<T>, ConnectableObservable<T>>",
+     "text": "publishBehavior<T>(initialValue: T): UnaryFunction<Observable<T>, ConnectableObservable<T>>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": true
+  },
+  {
+   "name": "publishLast",
+   "file": "publishLast.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [],
+     "returnType": "UnaryFunction<Observable<T>, ConnectableObservable<T>>",
+     "text": "publishLast<T>(): UnaryFunction<Observable<T>, ConnectableObservable<T>>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": true
+  },
+  {
+   "name": "publishReplay",
+   "file": "publishReplay.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "bufferSize",
+       "type": "number",
+       "optional": true,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "windowTime",
+       "type": "number",
+       "optional": true,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "timestampProvider",
+       "type": "TimestampProvider",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "publishReplay<T>(bufferSize?: number, windowTime?: number, timestampProvider?: TimestampProvider): MonoTypeOperatorFunction<T>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "O extends ObservableInput<any>"
+     ],
+     "params": [
+      {
+       "name": "bufferSize",
+       "type": "number | undefined",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "windowTime",
+       "type": "number | undefined",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "selector",
+       "type": "(shared: Observable<T>) => O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "timestampProvider",
+       "type": "TimestampProvider",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, ObservedValueOf<O>>",
+     "text": "publishReplay<T, O extends ObservableInput<any>>(bufferSize: number | undefined, windowTime: number | undefined, selector: (shared: Observable<T>) => O, timestampProvider?: TimestampProvider): OperatorFunction<T, ObservedValueOf<O>>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "O extends ObservableInput<any>"
+     ],
+     "params": [
+      {
+       "name": "bufferSize",
+       "type": "number | undefined",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "windowTime",
+       "type": "number | undefined",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "selector",
+       "type": "undefined",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "timestampProvider",
+       "type": "TimestampProvider",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, ObservedValueOf<O>>",
+     "text": "publishReplay<T, O extends ObservableInput<any>>(bufferSize: number | undefined, windowTime: number | undefined, selector: undefined, timestampProvider: TimestampProvider): OperatorFunction<T, ObservedValueOf<O>>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": true
+  },
+  {
+   "name": "race",
+   "file": "race.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[]"
+     ],
+     "params": [
+      {
+       "name": "otherSources",
+       "type": "[...ObservableInputTuple<A>]",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | A[number]>",
+     "text": "race<T, A extends readonly unknown[]>(otherSources: [...ObservableInputTuple<A>]): OperatorFunction<T, T | A[number]>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[]"
+     ],
+     "params": [
+      {
+       "name": "otherSources",
+       "type": "[...ObservableInputTuple<A>]",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | A[number]>",
+     "text": "race<T, A extends readonly unknown[]>(...otherSources: [...ObservableInputTuple<A>]): OperatorFunction<T, T | A[number]>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": true
+  },
+  {
+   "name": "raceWith",
+   "file": "raceWith.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[]"
+     ],
+     "params": [
+      {
+       "name": "otherSources",
+       "type": "[...ObservableInputTuple<A>]",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | A[number]>",
+     "text": "raceWith<T, A extends readonly unknown[]>(...otherSources: [...ObservableInputTuple<A>]): OperatorFunction<T, T | A[number]>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "reduce",
+   "file": "reduce.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "V",
+      "A = V"
+     ],
+     "params": [
+      {
+       "name": "accumulator",
+       "type": "(acc: A | V, value: V, index: number) => A",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<V, V | A>",
+     "text": "reduce<V, A = V>(accumulator: (acc: A | V, value: V, index: number) => A): OperatorFunction<V, V | A>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "V",
+      "A"
+     ],
+     "params": [
+      {
+       "name": "accumulator",
+       "type": "(acc: A, value: V, index: number) => A",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "seed",
+       "type": "A",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<V, A>",
+     "text": "reduce<V, A>(accumulator: (acc: A, value: V, index: number) => A, seed: A): OperatorFunction<V, A>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "V",
+      "A",
+      "S = A"
+     ],
+     "params": [
+      {
+       "name": "accumulator",
+       "type": "(acc: A | S, value: V, index: number) => A",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "seed",
+       "type": "S",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<V, A>",
+     "text": "reduce<V, A, S = A>(accumulator: (acc: A | S, value: V, index: number) => A, seed: S): OperatorFunction<V, A>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "refCount",
+   "file": "refCount.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "refCount<T>(): MonoTypeOperatorFunction<T>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": true
+  },
+  {
+   "name": "repeat",
+   "file": "repeat.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "countOrConfig",
+       "type": "number | RepeatConfig",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "repeat<T>(countOrConfig?: number | RepeatConfig): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "repeatWhen",
+   "file": "repeatWhen.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "notifier",
+       "type": "(notifications: Observable<void>) => ObservableInput<any>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "repeatWhen<T>(notifier: (notifications: Observable<void>) => ObservableInput<any>): MonoTypeOperatorFunction<T>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": true
+  },
+  {
+   "name": "retry",
+   "file": "retry.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "count",
+       "type": "number",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "retry<T>(count?: number): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "config",
+       "type": "RetryConfig",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "retry<T>(config: RetryConfig): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "retryWhen",
+   "file": "retryWhen.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "notifier",
+       "type": "(errors: Observable<any>) => ObservableInput<any>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "retryWhen<T>(notifier: (errors: Observable<any>) => ObservableInput<any>): MonoTypeOperatorFunction<T>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": true
+  },
+  {
+   "name": "sample",
+   "file": "sample.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "notifier",
+       "type": "ObservableInput<any>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "sample<T>(notifier: ObservableInput<any>): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "sampleTime",
+   "file": "sampleTime.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "period",
+       "type": "number",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "scheduler",
+       "type": "SchedulerLike",
+       "optional": true,
+       "rest": false,
+       "default": "asyncScheduler"
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "sampleTime<T>(period: number, scheduler: SchedulerLike = asyncScheduler): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "scan",
+   "file": "scan.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "V",
+      "A = V"
+     ],
+     "params": [
+      {
+       "name": "accumulator",
+       "type": "(acc: A | V, value: V, index: number) => A",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<V, V | A>",
+     "text": "scan<V, A = V>(accumulator: (acc: A | V, value: V, index: number) => A): OperatorFunction<V, V | A>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "V",
+      "A"
+     ],
+     "params": [
+      {
+       "name": "accumulator",
+       "type": "(acc: A, value: V, index: number) => A",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "seed",
+       "type": "A",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<V, A>",
+     "text": "scan<V, A>(accumulator: (acc: A, value: V, index: number) => A, seed: A): OperatorFunction<V, A>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "V",
+      "A",
+      "S"
+     ],
+     "params": [
+      {
+       "name": "accumulator",
+       "type": "(acc: A | S, value: V, index: number) => A",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "seed",
+       "type": "S",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<V, A>",
+     "text": "scan<V, A, S>(accumulator: (acc: A | S, value: V, index: number) => A, seed: S): OperatorFunction<V, A>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "sequenceEqual",
+   "file": "sequenceEqual.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "compareTo",
+       "type": "ObservableInput<T>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "comparator",
+       "type": "(a: T, b: T) => boolean",
+       "optional": true,
+       "rest": false,
+       "default": "(a, b) => a === b"
+      }
+     ],
+     "returnType": "OperatorFunction<T, boolean>",
+     "text": "sequenceEqual<T>(compareTo: ObservableInput<T>, comparator: (a: T, b: T) => boolean = (a, b) => a === b): OperatorFunction<T, boolean>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "share",
+   "file": "share.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "share<T>(): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "options",
+       "type": "ShareConfig<T>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "share<T>(options: ShareConfig<T>): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "shareReplay",
+   "file": "shareReplay.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "config",
+       "type": "ShareReplayConfig",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "shareReplay<T>(config: ShareReplayConfig): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "bufferSize",
+       "type": "number",
+       "optional": true,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "windowTime",
+       "type": "number",
+       "optional": true,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "scheduler",
+       "type": "SchedulerLike",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "shareReplay<T>(bufferSize?: number, windowTime?: number, scheduler?: SchedulerLike): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "single",
+   "file": "single.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "BooleanConstructor",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, TruthyTypesOf<T>>",
+     "text": "single<T>(predicate: BooleanConstructor): OperatorFunction<T, TruthyTypesOf<T>>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(value: T, index: number, source: Observable<T>) => boolean",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "single<T>(predicate?: (value: T, index: number, source: Observable<T>) => boolean): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "skip",
+   "file": "skip.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "count",
+       "type": "number",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "skip<T>(count: number): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "skipLast",
+   "file": "skipLast.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "skipCount",
+       "type": "number",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "skipLast<T>(skipCount: number): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "skipUntil",
+   "file": "skipUntil.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "notifier",
+       "type": "ObservableInput<any>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "skipUntil<T>(notifier: ObservableInput<any>): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "skipWhile",
+   "file": "skipWhile.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "BooleanConstructor",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, Extract<T, Falsy> extends never ? never : T>",
+     "text": "skipWhile<T>(predicate: BooleanConstructor): OperatorFunction<T, Extract<T, Falsy> extends never ? never : T>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(value: T, index: number) => true",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, never>",
+     "text": "skipWhile<T>(predicate: (value: T, index: number) => true): OperatorFunction<T, never>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(value: T, index: number) => boolean",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "skipWhile<T>(predicate: (value: T, index: number) => boolean): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "startWith",
+   "file": "startWith.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "value",
+       "type": "null",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | null>",
+     "text": "startWith<T>(value: null): OperatorFunction<T, T | null>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "value",
+       "type": "undefined",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | undefined>",
+     "text": "startWith<T>(value: undefined): OperatorFunction<T, T | undefined>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[] = T[]"
+     ],
+     "params": [
+      {
+       "name": "valuesAndScheduler",
+       "type": "[...A, SchedulerLike]",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | ValueFromArray<A>>",
+     "text": "startWith<T, A extends readonly unknown[] = T[]>(...valuesAndScheduler: [...A, SchedulerLike]): OperatorFunction<T, T | ValueFromArray<A>>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[] = T[]"
+     ],
+     "params": [
+      {
+       "name": "values",
+       "type": "A",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | ValueFromArray<A>>",
+     "text": "startWith<T, A extends readonly unknown[] = T[]>(...values: A): OperatorFunction<T, T | ValueFromArray<A>>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "subscribeOn",
+   "file": "subscribeOn.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "scheduler",
+       "type": "SchedulerLike",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "delay",
+       "type": "number",
+       "optional": true,
+       "rest": false,
+       "default": "0"
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "subscribeOn<T>(scheduler: SchedulerLike, delay: number = 0): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "switchAll",
+   "file": "switchAll.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "O extends ObservableInput<any>"
+     ],
+     "params": [],
+     "returnType": "OperatorFunction<O, ObservedValueOf<O>>",
+     "text": "switchAll<O extends ObservableInput<any>>(): OperatorFunction<O, ObservedValueOf<O>>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "switchMap",
+   "file": "switchMap.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "O extends ObservableInput<any>"
+     ],
+     "params": [
+      {
+       "name": "project",
+       "type": "(value: T, index: number) => O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, ObservedValueOf<O>>",
+     "text": "switchMap<T, O extends ObservableInput<any>>(project: (value: T, index: number) => O): OperatorFunction<T, ObservedValueOf<O>>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "O extends ObservableInput<any>"
+     ],
+     "params": [
+      {
+       "name": "project",
+       "type": "(value: T, index: number) => O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "resultSelector",
+       "type": "undefined",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, ObservedValueOf<O>>",
+     "text": "switchMap<T, O extends ObservableInput<any>>(project: (value: T, index: number) => O, resultSelector: undefined): OperatorFunction<T, ObservedValueOf<O>>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "R",
+      "O extends ObservableInput<any>"
+     ],
+     "params": [
+      {
+       "name": "project",
+       "type": "(value: T, index: number) => O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "resultSelector",
+       "type": "(outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, R>",
+     "text": "switchMap<T, R, O extends ObservableInput<any>>(project: (value: T, index: number) => O, resultSelector: (outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R): OperatorFunction<T, R>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "switchMapTo",
+   "file": "switchMapTo.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "O extends ObservableInput<unknown>"
+     ],
+     "params": [
+      {
+       "name": "observable",
+       "type": "O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<unknown, ObservedValueOf<O>>",
+     "text": "switchMapTo<O extends ObservableInput<unknown>>(observable: O): OperatorFunction<unknown, ObservedValueOf<O>>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "O extends ObservableInput<unknown>"
+     ],
+     "params": [
+      {
+       "name": "observable",
+       "type": "O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "resultSelector",
+       "type": "undefined",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<unknown, ObservedValueOf<O>>",
+     "text": "switchMapTo<O extends ObservableInput<unknown>>(observable: O, resultSelector: undefined): OperatorFunction<unknown, ObservedValueOf<O>>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "R",
+      "O extends ObservableInput<unknown>"
+     ],
+     "params": [
+      {
+       "name": "observable",
+       "type": "O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "resultSelector",
+       "type": "(outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, R>",
+     "text": "switchMapTo<T, R, O extends ObservableInput<unknown>>(observable: O, resultSelector: (outerValue: T, innerValue: ObservedValueOf<O>, outerIndex: number, innerIndex: number) => R): OperatorFunction<T, R>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": true
+  },
+  {
+   "name": "switchScan",
+   "file": "switchScan.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "R",
+      "O extends ObservableInput<any>"
+     ],
+     "params": [
+      {
+       "name": "accumulator",
+       "type": "(acc: R, value: T, index: number) => O",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "seed",
+       "type": "R",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, ObservedValueOf<O>>",
+     "text": "switchScan<T, R, O extends ObservableInput<any>>(accumulator: (acc: R, value: T, index: number) => O, seed: R): OperatorFunction<T, ObservedValueOf<O>>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "take",
+   "file": "take.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "count",
+       "type": "number",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "take<T>(count: number): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "takeLast",
+   "file": "takeLast.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "count",
+       "type": "number",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "takeLast<T>(count: number): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "takeUntil",
+   "file": "takeUntil.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "notifier",
+       "type": "ObservableInput<any>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "takeUntil<T>(notifier: ObservableInput<any>): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "takeWhile",
+   "file": "takeWhile.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "BooleanConstructor",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "inclusive",
+       "type": "true",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "takeWhile<T>(predicate: BooleanConstructor, inclusive: true): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "BooleanConstructor",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "inclusive",
+       "type": "false",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, TruthyTypesOf<T>>",
+     "text": "takeWhile<T>(predicate: BooleanConstructor, inclusive: false): OperatorFunction<T, TruthyTypesOf<T>>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "BooleanConstructor",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, TruthyTypesOf<T>>",
+     "text": "takeWhile<T>(predicate: BooleanConstructor): OperatorFunction<T, TruthyTypesOf<T>>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "S extends T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(value: T, index: number) => value is S",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, S>",
+     "text": "takeWhile<T, S extends T>(predicate: (value: T, index: number) => value is S): OperatorFunction<T, S>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "S extends T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(value: T, index: number) => value is S",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "inclusive",
+       "type": "false",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, S>",
+     "text": "takeWhile<T, S extends T>(predicate: (value: T, index: number) => value is S, inclusive: false): OperatorFunction<T, S>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "predicate",
+       "type": "(value: T, index: number) => boolean",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "inclusive",
+       "type": "boolean",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "takeWhile<T>(predicate: (value: T, index: number) => boolean, inclusive?: boolean): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "tap",
+   "file": "tap.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "observerOrNext",
+       "type": "Partial<TapObserver<T>> | ((value: T) => void)",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "tap<T>(observerOrNext?: Partial<TapObserver<T>> | ((value: T) => void)): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "next",
+       "type": "((value: T) => void) | null",
+       "optional": true,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "error",
+       "type": "((error: any) => void) | null",
+       "optional": true,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "complete",
+       "type": "(() => void) | null",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "tap<T>(next?: ((value: T) => void) | null, error?: ((error: any) => void) | null, complete?: (() => void) | null): MonoTypeOperatorFunction<T>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "throttle",
+   "file": "throttle.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "durationSelector",
+       "type": "(value: T) => ObservableInput<any>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "config",
+       "type": "ThrottleConfig",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "throttle<T>(durationSelector: (value: T) => ObservableInput<any>, config?: ThrottleConfig): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "throttleTime",
+   "file": "throttleTime.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "duration",
+       "type": "number",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "scheduler",
+       "type": "SchedulerLike",
+       "optional": true,
+       "rest": false,
+       "default": "asyncScheduler"
+      },
+      {
+       "name": "config",
+       "type": "ThrottleConfig",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "throttleTime<T>(duration: number, scheduler: SchedulerLike = asyncScheduler, config?: ThrottleConfig): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "throwIfEmpty",
+   "file": "throwIfEmpty.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "errorFactory",
+       "type": "() => any",
+       "optional": true,
+       "rest": false,
+       "default": "defaultErrorFactory"
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "throwIfEmpty<T>(errorFactory: () => any = defaultErrorFactory): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "timeInterval",
+   "file": "timeInterval.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "scheduler",
+       "type": "SchedulerLike",
+       "optional": true,
+       "rest": false,
+       "default": "asyncScheduler"
+      }
+     ],
+     "returnType": "OperatorFunction<T, TimeInterval<T>>",
+     "text": "timeInterval<T>(scheduler: SchedulerLike = asyncScheduler): OperatorFunction<T, TimeInterval<T>>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "timeout",
+   "file": "timeout.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "O extends ObservableInput<unknown>",
+      "M = unknown"
+     ],
+     "params": [
+      {
+       "name": "config",
+       "type": "TimeoutConfig<T, O, M> & { with: (info: TimeoutInfo<T, M>) => O }",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | ObservedValueOf<O>>",
+     "text": "timeout<T, O extends ObservableInput<unknown>, M = unknown>(config: TimeoutConfig<T, O, M> & { with: (info: TimeoutInfo<T, M>) => O }): OperatorFunction<T, T | ObservedValueOf<O>>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "M = unknown"
+     ],
+     "params": [
+      {
+       "name": "config",
+       "type": "Omit<TimeoutConfig<T, any, M>, 'with'>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T>",
+     "text": "timeout<T, M = unknown>(config: Omit<TimeoutConfig<T, any, M>, 'with'>): OperatorFunction<T, T>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "first",
+       "type": "Date",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "scheduler",
+       "type": "SchedulerLike",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "timeout<T>(first: Date, scheduler?: SchedulerLike): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "each",
+       "type": "number",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "scheduler",
+       "type": "SchedulerLike",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "MonoTypeOperatorFunction<T>",
+     "text": "timeout<T>(each: number, scheduler?: SchedulerLike): MonoTypeOperatorFunction<T>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "timeoutWith",
+   "file": "timeoutWith.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "R"
+     ],
+     "params": [
+      {
+       "name": "dueBy",
+       "type": "Date",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "switchTo",
+       "type": "ObservableInput<R>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "scheduler",
+       "type": "SchedulerLike",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | R>",
+     "text": "timeoutWith<T, R>(dueBy: Date, switchTo: ObservableInput<R>, scheduler?: SchedulerLike): OperatorFunction<T, T | R>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "R"
+     ],
+     "params": [
+      {
+       "name": "waitFor",
+       "type": "number",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "switchTo",
+       "type": "ObservableInput<R>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "scheduler",
+       "type": "SchedulerLike",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, T | R>",
+     "text": "timeoutWith<T, R>(waitFor: number, switchTo: ObservableInput<R>, scheduler?: SchedulerLike): OperatorFunction<T, T | R>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": true
+  },
+  {
+   "name": "timestamp",
+   "file": "timestamp.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "timestampProvider",
+       "type": "TimestampProvider",
+       "optional": true,
+       "rest": false,
+       "default": "dateTimestampProvider"
+      }
+     ],
+     "returnType": "OperatorFunction<T, Timestamp<T>>",
+     "text": "timestamp<T>(timestampProvider: TimestampProvider = dateTimestampProvider): OperatorFunction<T, Timestamp<T>>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "toArray",
+   "file": "toArray.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [],
+     "returnType": "OperatorFunction<T, T[]>",
+     "text": "toArray<T>(): OperatorFunction<T, T[]>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "window",
+   "file": "window.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "windowBoundaries",
+       "type": "ObservableInput<any>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, Observable<T>>",
+     "text": "window<T>(windowBoundaries: ObservableInput<any>): OperatorFunction<T, Observable<T>>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "windowCount",
+   "file": "windowCount.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "windowSize",
+       "type": "number",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "startWindowEvery",
+       "type": "number",
+       "optional": true,
+       "rest": false,
+       "default": "0"
+      }
+     ],
+     "returnType": "OperatorFunction<T, Observable<T>>",
+     "text": "windowCount<T>(windowSize: number, startWindowEvery: number = 0): OperatorFunction<T, Observable<T>>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "windowTime",
+   "file": "windowTime.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "windowTimeSpan",
+       "type": "number",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "scheduler",
+       "type": "SchedulerLike",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, Observable<T>>",
+     "text": "windowTime<T>(windowTimeSpan: number, scheduler?: SchedulerLike): OperatorFunction<T, Observable<T>>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "windowTimeSpan",
+       "type": "number",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "windowCreationInterval",
+       "type": "number",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "scheduler",
+       "type": "SchedulerLike",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, Observable<T>>",
+     "text": "windowTime<T>(windowTimeSpan: number, windowCreationInterval: number, scheduler?: SchedulerLike): OperatorFunction<T, Observable<T>>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "windowTimeSpan",
+       "type": "number",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "windowCreationInterval",
+       "type": "number | null | void",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "maxWindowSize",
+       "type": "number",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "scheduler",
+       "type": "SchedulerLike",
+       "optional": true,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, Observable<T>>",
+     "text": "windowTime<T>(windowTimeSpan: number, windowCreationInterval: number | null | void, maxWindowSize: number, scheduler?: SchedulerLike): OperatorFunction<T, Observable<T>>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "windowToggle",
+   "file": "windowToggle.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "O"
+     ],
+     "params": [
+      {
+       "name": "openings",
+       "type": "ObservableInput<O>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "closingSelector",
+       "type": "(openValue: O) => ObservableInput<any>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, Observable<T>>",
+     "text": "windowToggle<T, O>(openings: ObservableInput<O>, closingSelector: (openValue: O) => ObservableInput<any>): OperatorFunction<T, Observable<T>>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "windowWhen",
+   "file": "windowWhen.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [
+      {
+       "name": "closingSelector",
+       "type": "() => ObservableInput<any>",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, Observable<T>>",
+     "text": "windowWhen<T>(closingSelector: () => ObservableInput<any>): OperatorFunction<T, Observable<T>>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "withLatestFrom",
+   "file": "withLatestFrom.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "O extends unknown[]"
+     ],
+     "params": [
+      {
+       "name": "inputs",
+       "type": "[...ObservableInputTuple<O>]",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, [T, ...O]>",
+     "text": "withLatestFrom<T, O extends unknown[]>(...inputs: [...ObservableInputTuple<O>]): OperatorFunction<T, [T, ...O]>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "O extends unknown[]",
+      "R"
+     ],
+     "params": [
+      {
+       "name": "inputs",
+       "type": "[...ObservableInputTuple<O>, (...value: [T, ...O]) => R]",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, R>",
+     "text": "withLatestFrom<T, O extends unknown[], R>(...inputs: [...ObservableInputTuple<O>, (...value: [T, ...O]) => R]): OperatorFunction<T, R>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "zip",
+   "file": "zip.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[]"
+     ],
+     "params": [
+      {
+       "name": "otherInputs",
+       "type": "[...ObservableInputTuple<A>]",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, Cons<T, A>>",
+     "text": "zip<T, A extends readonly unknown[]>(otherInputs: [...ObservableInputTuple<A>]): OperatorFunction<T, Cons<T, A>>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[]",
+      "R"
+     ],
+     "params": [
+      {
+       "name": "otherInputsAndProject",
+       "type": "[...ObservableInputTuple<A>]",
+       "optional": false,
+       "rest": false,
+       "default": null
+      },
+      {
+       "name": "project",
+       "type": "(...values: Cons<T, A>) => R",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, R>",
+     "text": "zip<T, A extends readonly unknown[], R>(otherInputsAndProject: [...ObservableInputTuple<A>], project: (...values: Cons<T, A>) => R): OperatorFunction<T, R>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[]"
+     ],
+     "params": [
+      {
+       "name": "otherInputs",
+       "type": "[...ObservableInputTuple<A>]",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, Cons<T, A>>",
+     "text": "zip<T, A extends readonly unknown[]>(...otherInputs: [...ObservableInputTuple<A>]): OperatorFunction<T, Cons<T, A>>",
+     "deprecated": true
+    },
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[]",
+      "R"
+     ],
+     "params": [
+      {
+       "name": "otherInputsAndProject",
+       "type": "[...ObservableInputTuple<A>, (...values: Cons<T, A>) => R]",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, R>",
+     "text": "zip<T, A extends readonly unknown[], R>(...otherInputsAndProject: [...ObservableInputTuple<A>, (...values: Cons<T, A>) => R]): OperatorFunction<T, R>",
+     "deprecated": true
+    }
+   ],
+   "deprecated": true
+  },
+  {
+   "name": "zipAll",
+   "file": "zipAll.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [],
+     "returnType": "OperatorFunction<ObservableInput<T>, T[]>",
+     "text": "zipAll<T>(): OperatorFunction<ObservableInput<T>, T[]>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T"
+     ],
+     "params": [],
+     "returnType": "OperatorFunction<any, T[]>",
+     "text": "zipAll<T>(): OperatorFunction<any, T[]>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "T",
+      "R"
+     ],
+     "params": [
+      {
+       "name": "project",
+       "type": "(...values: T[]) => R",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<ObservableInput<T>, R>",
+     "text": "zipAll<T, R>(project: (...values: T[]) => R): OperatorFunction<ObservableInput<T>, R>",
+     "deprecated": false
+    },
+    {
+     "typeParameters": [
+      "R"
+     ],
+     "params": [
+      {
+       "name": "project",
+       "type": "(...values: Array<any>) => R",
+       "optional": false,
+       "rest": false,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<any, R>",
+     "text": "zipAll<R>(project: (...values: Array<any>) => R): OperatorFunction<any, R>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  },
+  {
+   "name": "zipWith",
+   "file": "zipWith.ts",
+   "signatures": [
+    {
+     "typeParameters": [
+      "T",
+      "A extends readonly unknown[]"
+     ],
+     "params": [
+      {
+       "name": "otherInputs",
+       "type": "[...ObservableInputTuple<A>]",
+       "optional": false,
+       "rest": true,
+       "default": null
+      }
+     ],
+     "returnType": "OperatorFunction<T, Cons<T, A>>",
+     "text": "zipWith<T, A extends readonly unknown[]>(...otherInputs: [...ObservableInputTuple<A>]): OperatorFunction<T, Cons<T, A>>",
+     "deprecated": false
+    }
+   ],
+   "deprecated": false
+  }
+ ],
+ "aliases": [
+  {
+   "name": "combineAll",
+   "aliasOf": "combineLatestAll",
+   "file": "combineAll.ts",
+   "deprecated": true
+  },
+  {
+   "name": "exhaust",
+   "aliasOf": "exhaustAll",
+   "file": "exhaust.ts",
+   "deprecated": true
+  },
+  {
+   "name": "flatMap",
+   "aliasOf": "mergeMap",
+   "file": "flatMap.ts",
+   "deprecated": true
+  },
+  {
+   "name": "onErrorResumeNext",
+   "aliasOf": "onErrorResumeNextWith",
+   "file": "onErrorResumeNextWith.ts",
+   "deprecated": true
+  }
+ ]
+}
